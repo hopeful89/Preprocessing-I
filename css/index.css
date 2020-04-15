@@ -174,6 +174,11 @@ a {
   width: 95%;
   margin: auto auto;
 }
+@media (max-width: 500px) {
+  .main-container {
+    width: 100vw;
+  }
+}
 .main-container nav {
   position: fixed;
   background: yellow;
@@ -181,10 +186,11 @@ a {
   justify-content: space-around;
   align-items: center;
   width: 95%;
+  margin: 0 auto;
 }
 @media (max-width: 500px) {
   .main-container nav {
-    width: 94%;
+    width: 100vw;
   }
 }
 .main-container nav a {
