@@ -172,6 +172,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 95%;
+  margin: 0 auto;
 }
 @media (max-width: 500px) {
   .main-container {
