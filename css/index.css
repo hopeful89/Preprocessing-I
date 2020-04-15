@@ -182,6 +182,11 @@ a {
   align-items: center;
   width: 95%;
 }
+@media (max-width: 500px) {
+  .main-container nav {
+    width: 94%;
+  }
+}
 .main-container nav a {
   height: 8%;
   font-size: 2.2rem;
