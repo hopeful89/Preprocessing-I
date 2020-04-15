@@ -213,6 +213,8 @@ a {
 @media (max-width: 500px) {
   .main-container .upper-content {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 }
 .main-container .upper-content img {
@@ -223,7 +225,12 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .upper-content img {
-    display: none;
+    margin: 5% auto;
+    border-radius: 50%;
+    border-left: 5px outset red;
+    border-right: 5px outset dodgerblue;
+    width: 500px;
+    height: 300px;
   }
 }
 .main-container .upper-content h1 {
