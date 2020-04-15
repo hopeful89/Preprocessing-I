@@ -172,7 +172,6 @@ a {
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: 0;
 }
 @media (max-width: 500px) {
   .main-container {
@@ -186,7 +185,6 @@ a {
   justify-content: space-around;
   align-items: center;
   width: 95%;
-  margin: 0 auto;
 }
 @media (max-width: 500px) {
   .main-container nav {
@@ -329,8 +327,10 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .lower-content {
-    width: 90vw;
-    margin: 1% 2%;
+    width: 100vw;
+  }
+  .main-container .lower-content div:nth-of-type(4) {
+    display: none;
   }
 }
 .main-container .lower-content div {
@@ -345,7 +345,8 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .lower-content div {
-    padding: 1%;
+    margin: 0%;
+    font-size: 1.6rem;
   }
 }
 .main-container .lower-content div p {
