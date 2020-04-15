@@ -86,6 +86,8 @@ a {
 }
 
 //---------------------------------------Variables---------------------------------------
+@phone: "(max-width: 500px)";
+@tablet: ~"only screen and (max-width: 767px)";
 @color-white: white;
 @color-grey: grey;
 @color-darkgrey: darkgrey;
@@ -95,10 +97,6 @@ a {
 @h4-size: 2.5rem;
 
 // -----------------------------------------------------------------------------------
-
-body {
-
-}
 
 .main-container {
 
@@ -119,6 +117,7 @@ body {
 		a {
 			height: 8%;
 			font-size: 2.2rem;
+
 		}
 	}
 
@@ -126,18 +125,27 @@ body {
 		.flex-row();
 		justify-content: space-evenly;
 		width: 100%;
+		height: 50vh;
 		font-size: 1.7rem;
 		background: @color-background;
 		.content-padding();
 		padding-left: 1%;
 		border-bottom: 1px solid black;
-		
+
+		// @media (max-width: 500px) {
+			
+		// 	height: 50vh;
+		// }
 
 		img {
 			max-width: 50%;
 			max-height: 100%;
 			margin: 0 1% 0 0;
 			border-radius: 15px;
+
+			@media (max-width: 500px) {
+				display: none;
+			}
 		}
 
 		h1 {
@@ -146,6 +154,12 @@ body {
 			font-size: 5rem;
 			width: 100%;
 			height: 100%;
+
+			@media (max-width: 500px) {
+				justify-content: space-around;
+				margin: 2% 0 0 0;
+				font-size: 4rem;
+			}
 
 			p {
 				.flex-column;
@@ -163,45 +177,69 @@ body {
 				height: 5vh;
 				width: 25vw;
 				margin: 2% 0 0 0;
+
+				@media (max-width: 500px) {
+					width: 40vw;
+				}
 			}
 		}
 	}
 
 	.middle-content {
 		.flex-row();
-		color: @color-white;
+		color: black;
 		padding: 2% 1%;
 		height: 40vh;
-		background-image: linear-gradient(@color-background, darkgrey, @color-background);
+		background-image: linear-gradient(@color-background, darkgrey, dodgerblue);
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@media (max-width: 500px) {
+			height: 70vh;
+		}
 		
 		div {
 			font-size: @paragraph-text;
 			width: 50%;
 			height: 100%;
 
+			@media (max-width: 500px) {
+				padding: 1%;
+			}
+
 			h2 {
 				color: black;
 				font-size: @h2-size;
 				font-weight: bold;
 				margin: 2% 0;
+
+				@media (max-width: 500px) {
+					font-size: 98%;
+				}
 			}
+
+			p {
+				font-size: 95%;
+			}
+
 			
 			li {
 				.flex-column();
+				background-image: linear-gradient(@color-background, darkgrey, dodgerblue);
 				justify-content: center;
 				height: 15%;
 				padding: 1% 1% 1% 2%;
 				margin: 0 0 0 1%;
 				list-style-type: none;
-				border: 1px solid @color-grey;
+				border: 1px solid black;
+
 			}
 		}
 	}
 
 	.work-history {
 		font-size: @h2-size;
+		margin: 2% 0;
 	}
 	.lower-content {
 		.flex-row();
@@ -217,6 +255,7 @@ body {
 			color: violet;
 
 			p {
+				padding: 1vw;
 				.flex-column();
 				border-top: 2px solid @color-darkgrey;
 				height: 30%;
@@ -245,5 +284,5 @@ body {
 		margin-top: 5%;
 		justify-content: center;
 
-		}	
+	}	
 }
