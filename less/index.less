@@ -109,7 +109,7 @@ a {
 	.flex-column();
 	// height: 95%;
 	width: 95%;
-	margin: auto auto;
+	margin: 0;
 
 	@media (max-width: 500px) {
 		width: 100vw;
@@ -269,6 +269,11 @@ a {
 	.lower-content {
 		.flex-row();
 		background: @color-grey;
+
+		@media (max-width: 500px) {
+			width: 90vw;
+			margin: 1% 2%;
+		}
 		
 		div {
 			.flex-column();
@@ -279,7 +284,7 @@ a {
 			color: white;
 
 			@media (max-width: 500px) {
-				margin: 1%;
+				padding: 1%;
 			}
 
 			p {

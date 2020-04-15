@@ -172,7 +172,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: auto auto;
+  margin: 0;
 }
 @media (max-width: 500px) {
   .main-container {
@@ -327,6 +327,12 @@ a {
   display: flex;
   background: grey;
 }
+@media (max-width: 500px) {
+  .main-container .lower-content {
+    width: 90vw;
+    margin: 1% 2%;
+  }
+}
 .main-container .lower-content div {
   display: flex;
   flex-direction: column;
@@ -339,7 +345,7 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .lower-content div {
-    margin: 1%;
+    padding: 1%;
   }
 }
 .main-container .lower-content div p {
