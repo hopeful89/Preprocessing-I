@@ -358,12 +358,14 @@ a {
   }
 }
 .main-container .lower-content div p {
-  padding: 1vw;
   display: flex;
   flex-direction: column;
   border-top: 2px solid darkgrey;
   height: 30%;
   justify-content: center;
+}
+.main-container .lower-content div:first-child {
+  padding: 0 0 0 1vw;
 }
 .main-container .lower-content h4 {
   font-size: 2.5rem;
