@@ -276,7 +276,7 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .middle-content {
-    height: 60vh;
+    height: 100vh;
   }
 }
 .main-container .middle-content div {
