@@ -96,73 +96,72 @@ a {
 
 // -----------------------------------------------------------------------------------
 
+body {
+
+}
+
 .main-container {
+
 	.flex-column();
 	height: 95%;
 	width: 95%;
 	margin: auto auto;
+	
 
 	nav {
+		position: fixed;
+		background: yellow;
 		.flex-row();
-		height: 6%;
-		justify-content: flex-end;
+		justify-content: space-around;
 		align-items: center;
-		width: 100%;
+		width: 95%;
 
 		a {
-			width: 10vw;
-			font-size: 1.8rem;
+			height: 8%;
+			font-size: 2.2rem;
 		}
 	}
 
 	.upper-content {
-		.flex-column();
+		.flex-row();
 		justify-content: space-evenly;
-		align-items: flex-start;
 		width: 100%;
-		height: 50%;
 		font-size: 1.7rem;
 		background: @color-background;
 		.content-padding();
+		padding-left: 1%;
+		border-bottom: 1px solid black;
 		
 
 		img {
-			width: 30%;
-			min-height: 30%;
+			max-width: 50%;
+			max-height: 100%;
+			margin: 0 1% 0 0;
+			border-radius: 15px;
 		}
 
 		h1 {
 			.flex-column();
+			justify-content: space-between;
 			font-size: 5rem;
-			border-bottom: 1px solid black;
 			width: 100%;
-			height: 20%;
+			height: 100%;
 
 			p {
 				.flex-column;
-				flex-wrap: wrap;
-				padding: 2% .1%;
+				padding: 3% .1%;
 				font-size: @paragraph-text;
-				height: 20%;
+				height: 10vh;
+				flex-shrink: 1;
 				
 			}
-		}
-
-		p {
-			.flex-column();
-			justify-content: space-around;
-			font-size: @paragraph-text;
-			height: 30%;
-			width: 100%;
-			padding: 2% 0;
-
 			button {
+				align-self: center;
 				background: @color-darkgrey;
 				color: @color-white;
 				font-size: 1.8rem;
-				height: 30%;
-				
-				width: 20%;
+				height: 5vh;
+				width: 25vw;
 				margin: 2% 0 0 0;
 			}
 		}
@@ -170,8 +169,12 @@ a {
 
 	.middle-content {
 		.flex-row();
-		padding: 2% 0;
-		height: 30%;
+		color: @color-white;
+		padding: 2% 1%;
+		height: 40vh;
+		background-image: linear-gradient(@color-background, darkgrey, @color-background);
+		background-size: cover;
+		background-repeat: no-repeat;
 		
 		div {
 			font-size: @paragraph-text;
@@ -179,6 +182,7 @@ a {
 			height: 100%;
 
 			h2 {
+				color: black;
 				font-size: @h2-size;
 				font-weight: bold;
 				margin: 2% 0;
@@ -187,7 +191,7 @@ a {
 			li {
 				.flex-column();
 				justify-content: center;
-				height: 12.5%;
+				height: 15%;
 				padding: 1% 1% 1% 2%;
 				margin: 0 0 0 1%;
 				list-style-type: none;
@@ -201,18 +205,25 @@ a {
 	}
 	.lower-content {
 		.flex-row();
+		background: @color-grey;
+		
 
 		div {
 			.flex-column();
 			.history();
-			justify-content: space-around;
-			height: 10vh;
+			justify-content: space-evenly;
+			height: 28vh;
 			font-size: @paragraph-text;
-			color: voilet;
+			color: violet;
 
 			p {
+				.flex-column();
 				border-top: 2px solid @color-darkgrey;
+				height: 30%;
+				justify-content: center;
 			}
+
+			
 			
 		}
 
@@ -224,23 +235,15 @@ a {
 			flex-grow: 1;
 		}
 
-		div:nth-of-type(2), 		div:nth-of-type(3) {
+		div:nth-of-type(2), div:nth-of-type(3) {
 			flex-grow: 2;
 		}
-
-		p:nth-child(2), p:nth-child(4){
-			background: grey;
-		}
-		h4, p:nth-child(3){
-			background: lightgrey;
-		}
 	}
-
 	footer {
 		font-size: @paragraph-text;
 		.flex-row();
 		margin-top: 5%;
 		justify-content: center;
 
-	}
+		}	
 }
