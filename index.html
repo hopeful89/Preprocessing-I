@@ -18,12 +18,12 @@
     <div class = main-container>
       <nav>
         <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <a href="http://brandon-stine.netlify.com/" target = "_blank">Portfolio</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <secion class = "upper-content">
+      <section class = "upper-content">
         <img src="/images/80755446_2233152176988649_4349784217001918464_n.jpg" alt="pic-of-me">
         <h1>Frederick Seal- Web Dev
           <p>I am learning new technology all the time.
@@ -34,12 +34,10 @@
              Any information is AWESOME!
           </p>
           <button>Lets Team Up</button> 
-        </h1>
+        </h1> 
+      </section>
 
-        
-      </secion>
-
-      <section class= "middle-content">
+      <section class= "middle-content"  id = "about">
         <div>
           <h2>About me</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, ante sed egestas porttitor, nulla ipsum fermentum lacus, nec lacinia diam enim eget magna. Aliquam lobortis augue a risus ultricies, vel condimentum nulla congue. Suspendisse malesuada dolor quis condimentum sollicitudin. Suspendisse facilisis varius tortor, sed finibus elit vulputate vel. Sed finibus nisl nunc, vel facilisis elit euismod quis. Nam porttitor, augue ac mollis sagittis, nibh purus consequat velit, tempus mollis felis tortor id enim. Praesent varius rutrum turpis et mollis. Suspendisse odio ipsum, luctus vel ornare nec, placerat non augue. Nullam ultricies congue luctus. Interdum et malesuada fames. Etiam aliquam metus lorem, ut iaculis neque bibendum at.</p>
@@ -82,6 +80,35 @@
           <p>Melting Ice</p>
         </div>
       </section>
+
+      <section id="contact">
+				<form method="post" action="https://formsubmit.io/send/b6bf060d-3742-4342-9e3d-d181000f3635">
+					<input name="_formsubmit_id" type="text" style="display: none;">
+					<input name="_redirect" type="hidden" id="name" value="https://brandon-stine.netlify.com">
+					<h2>Get in touch!</h2>
+					<div>
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="firstname" placeholder="First Seal">
+					</div>
+
+					<div>
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Sealsir name">
+					</div>
+
+					<div>
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" placeholder="Your Fishbox">
+					</div>
+
+					<div>
+						<label for="subject">Subject</label>
+						<textarea id="subject" name="subject" placeholder="Send me some sealmail.." style="height: 200px;"></textarea>
+					</div>
+
+					<input class = "subbtn" type="submit" value="Sealmit">
+				</form>
+			</section>
 
       <footer>
         <p>Copyright Brandon Stine XXXX</p>

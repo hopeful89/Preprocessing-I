@@ -154,10 +154,23 @@ a {
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
+@keyframes example {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}
 .main-container {
   display: flex;
   flex-direction: column;
-  height: 95%;
   width: 95%;
   margin: auto auto;
 }
@@ -173,6 +186,10 @@ a {
   height: 8%;
   font-size: 2.2rem;
 }
+.main-container nav a:hover {
+  animation: example;
+  animation-duration: 4s;
+}
 .main-container .upper-content {
   display: flex;
   justify-content: space-evenly;
@@ -184,11 +201,16 @@ a {
   padding-left: 1%;
   border-bottom: 1px solid black;
 }
+@media (max-width: 500px) {
+  .main-container .upper-content {
+    height: 100vh;
+  }
+}
 .main-container .upper-content img {
   max-width: 50%;
   max-height: 100%;
   margin: 0 1% 0 0;
-  border-radius: 15px;
+  border-radius: 30%;
 }
 @media (max-width: 500px) {
   .main-container .upper-content img {
@@ -243,7 +265,7 @@ a {
 }
 @media (max-width: 500px) {
   .main-container .middle-content {
-    height: 70vh;
+    height: 60vh;
   }
 }
 .main-container .middle-content div {
@@ -268,7 +290,12 @@ a {
   }
 }
 .main-container .middle-content div p {
-  font-size: 95%;
+  font-size: 98%;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content div p {
+    font-size: 84%;
+  }
 }
 .main-container .middle-content div li {
   display: flex;
@@ -297,7 +324,12 @@ a {
   justify-content: space-evenly;
   height: 28vh;
   font-size: 2rem;
-  color: violet;
+  color: white;
+}
+@media (max-width: 500px) {
+  .main-container .lower-content div {
+    margin: 1%;
+  }
 }
 .main-container .lower-content div p {
   padding: 1vw;
@@ -323,4 +355,29 @@ a {
   display: flex;
   margin-top: 5%;
   justify-content: center;
+}
+.main-container #contact {
+  background-image: linear-gradient(#eeeeee, darkgrey, dodgerblue);
+}
+.main-container #contact h2 {
+  display: flex;
+  margin: 3% 0;
+  justify-content: center;
+  font-size: 5rem;
+}
+.main-container #contact div {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+.main-container #contact div label {
+  font-size: 2.3rem;
+  margin: 1% 0;
+}
+.main-container #contact div input {
+  height: 5vh;
+}
+.main-container #contact .subbtn {
+  width: 100%;
+  margin: 2% auto;
 }

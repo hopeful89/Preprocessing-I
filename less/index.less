@@ -95,15 +95,22 @@ a {
 @paragraph-text: 2rem;
 @h2-size: 3rem;
 @h4-size: 2.5rem;
+@keyframes example {  //test for tiffany
+	0%   {color: red;}
+	25%  {color: yellow;}
+	50%  {color: blue;}
+	100% {color: green;}
+  }
 
 // -----------------------------------------------------------------------------------
 
 .main-container {
 
 	.flex-column();
-	height: 95%;
+	// height: 95%;
 	width: 95%;
 	margin: auto auto;
+
 	
 
 	nav {
@@ -114,10 +121,15 @@ a {
 		align-items: center;
 		width: 95%;
 
+
 		a {
 			height: 8%;
 			font-size: 2.2rem;
 
+			&:hover { //test for tiffany
+				animation: example;
+				animation-duration: 4s;
+			}
 		}
 	}
 
@@ -132,16 +144,16 @@ a {
 		padding-left: 1%;
 		border-bottom: 1px solid black;
 
-		// @media (max-width: 500px) {
-			
-		// 	height: 50vh;
-		// }
+		@media (max-width: 500px) {
+			height: 100vh;
+		}
+
 
 		img {
 			max-width: 50%;
 			max-height: 100%;
 			margin: 0 1% 0 0;
-			border-radius: 15px;
+			border-radius:30%;
 
 			@media (max-width: 500px) {
 				display: none;
@@ -195,7 +207,7 @@ a {
 		background-repeat: no-repeat;
 
 		@media (max-width: 500px) {
-			height: 70vh;
+			height: 60vh;
 		}
 		
 		div {
@@ -219,10 +231,13 @@ a {
 			}
 
 			p {
-				font-size: 95%;
-			}
+				font-size: 98%;
 
-			
+				@media (max-width: 500px) {
+					font-size: 84%;
+				}
+			}
+		
 			li {
 				.flex-column();
 				background-image: linear-gradient(@color-background, darkgrey, dodgerblue);
@@ -245,14 +260,17 @@ a {
 		.flex-row();
 		background: @color-grey;
 		
-
 		div {
 			.flex-column();
 			.history();
 			justify-content: space-evenly;
 			height: 28vh;
 			font-size: @paragraph-text;
-			color: violet;
+			color: white;
+
+			@media (max-width: 500px) {
+				margin: 1%;
+			}
 
 			p {
 				padding: 1vw;
@@ -261,9 +279,6 @@ a {
 				height: 30%;
 				justify-content: center;
 			}
-
-			
-			
 		}
 
 		h4 {
@@ -283,6 +298,37 @@ a {
 		.flex-row();
 		margin-top: 5%;
 		justify-content: center;
-
 	}	
+
+	#contact {
+		background-image: linear-gradient(@color-background, darkgrey, dodgerblue);
+
+		h2 {
+			.flex-row();
+			margin: 3% 0;
+			justify-content: center;
+			font-size: 5rem;
+			
+		}
+		
+		div {
+			.flex-column();
+			// width: 52.5%;
+			margin: 1%;
+
+			label {
+				font-size: 2.3rem;
+				margin: 1% 0;
+			}
+
+			input {
+				height: 5vh;
+			}
+		}
+
+		.subbtn{
+			width: 100%;
+			margin: 2% auto;
+		}
+	}
 }
