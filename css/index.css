@@ -1,1 +1,411 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+.flex-row {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.content-padding {
+  padding: 2% 3% 1% 3%;
+}
+.history {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+@keyframes example {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container {
+    width: 100vw;
+  }
+}
+.main-container nav {
+  position: fixed;
+  background: yellow;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .main-container nav {
+    width: 100vw;
+  }
+}
+.main-container nav a {
+  height: 8%;
+  font-size: 2.2rem;
+}
+.main-container nav a:hover {
+  animation: example;
+  animation-duration: 4s;
+}
+.main-container .upper-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50vh;
+  font-size: 1.7rem;
+  background: #eeeeee;
+  padding: 2% 3% 1% 3%;
+  padding-left: 1%;
+  border-bottom: 1px solid black;
+}
+@media (max-width: 500px) {
+  .main-container .upper-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main-container .upper-content img {
+  max-width: 50%;
+  max-height: 100%;
+  margin: 0 1% 0 0;
+  border-radius: 30%;
+}
+@media (max-width: 500px) {
+  .main-container .upper-content img {
+    margin: 5% auto;
+    border-radius: 50%;
+    border-left: 5px outset red;
+    border-right: 5px outset dodgerblue;
+    width: 500px;
+    height: 300px;
+  }
+}
+.main-container .upper-content h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 5rem;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .main-container .upper-content h1 {
+    justify-content: space-around;
+    margin: 2% 0 0 0;
+    font-size: 4rem;
+  }
+}
+.main-container .upper-content h1 p {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 0.1%;
+  font-size: 2rem;
+  height: 10vh;
+  flex-shrink: 1;
+}
+.main-container .upper-content h1 button {
+  align-self: center;
+  background: darkgrey;
+  color: white;
+  font-size: 1.8rem;
+  height: 5vh;
+  width: 25vw;
+  margin: 2% 0 0 0;
+}
+@media (max-width: 500px) {
+  .main-container .upper-content h1 button {
+    width: 40vw;
+  }
+}
+.main-container .middle-content {
+  display: flex;
+  color: black;
+  padding: 2% 1%;
+  height: 40vh;
+  background-image: linear-gradient(#eeeeee, darkgrey, dodgerblue);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content {
+    height: 100vh;
+  }
+}
+.main-container .middle-content div {
+  font-size: 2rem;
+  width: 50%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content div {
+    padding: 1%;
+  }
+}
+.main-container .middle-content div h2 {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2% 0;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content div h2 {
+    font-size: 98%;
+  }
+}
+.main-container .middle-content div p {
+  font-size: 98%;
+}
+@media (max-width: 500px) {
+  .main-container .middle-content div p {
+    font-size: 84%;
+  }
+}
+.main-container .middle-content div li {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(#eeeeee, darkgrey, dodgerblue);
+  justify-content: center;
+  height: 15%;
+  padding: 1% 1% 1% 2%;
+  margin: 0 0 0 1%;
+  list-style-type: none;
+  border: 1px solid black;
+}
+.main-container .work-history {
+  font-size: 3rem;
+  margin: 2% 0;
+}
+.main-container .lower-content {
+  display: flex;
+  background: grey;
+}
+@media (max-width: 500px) {
+  .main-container .lower-content {
+    width: 100vw;
+  }
+  .main-container .lower-content div:nth-of-type(4) {
+    display: none;
+  }
+}
+.main-container .lower-content div {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  justify-content: space-evenly;
+  height: 28vh;
+  font-size: 2rem;
+  color: white;
+}
+@media (max-width: 500px) {
+  .main-container .lower-content div {
+    margin: 0%;
+    font-size: 1.6rem;
+  }
+}
+.main-container .lower-content div p {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid darkgrey;
+  height: 30%;
+  justify-content: center;
+}
+.main-container .lower-content div:first-child {
+  padding: 0 0 0 1vw;
+}
+.main-container .lower-content h4 {
+  font-size: 2.5rem;
+}
+.main-container .lower-content div:nth-of-type(1),
+.main-container .lower-content div:nth-of-type(4) {
+  flex-grow: 1;
+}
+.main-container .lower-content div:nth-of-type(2),
+.main-container .lower-content div:nth-of-type(3) {
+  flex-grow: 2;
+}
+.main-container footer {
+  font-size: 2rem;
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+}
+.main-container #contact {
+  background-image: linear-gradient(#eeeeee, darkgrey, dodgerblue);
+}
+.main-container #contact h2 {
+  display: flex;
+  margin: 3% 0;
+  justify-content: center;
+  font-size: 5rem;
+}
+.main-container #contact div {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+.main-container #contact div label {
+  font-size: 2.3rem;
+  margin: 1% 0;
+}
+.main-container #contact div input {
+  height: 5vh;
+}
+.main-container #contact .subbtn {
+  width: 100%;
+  margin: 2% auto;
+}
